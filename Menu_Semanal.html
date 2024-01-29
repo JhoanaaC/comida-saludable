@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas Saludables</title>
+    <style>
+        /* Agrega estilos CSS según tus preferencias */
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    
+    flex-direction: column; /* Cambiado a columna */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+        table {
+            width: 80%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .carousel {
+            width: 60%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .navbar {
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Centro horizontalmente */
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .carousel {
+            width: 60%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            width: 100%;
+            flex: 0 0 auto;
+        }
+        .card {
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 10px; 
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            width: 350px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #07f127;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s;
+        }
+
+        .overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal {
+            background-color: #fff;
+            padding: 90px;
+            border-radius: 50px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            font-size: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="jhoana.html">Inicio</a></li>
+        <li><a href="Comidas_Saludables.html">Recomendaciones</a></li>
+        <li><a href="Menu_Semanal.html">Menu Semanal</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+      </ul>
+      <center> <h1>Menu Semanal</h1></center>
+    
+    <p>A todos nos gustaría comer más saludable pero no es tan fácil ¿verdad? Nuestro ritmo de vida es frenético: el trabajo, los niños, la casa, todas las tareas que tenemos pendientes… Y entre tanta actividad muchas veces sacrificamos la alimentación.</p>
+
+<p>Por eso es buena idea planificar un menú semanal: Nos ayuda a organizarnos a la vez que comemos más equilibrado y ahorramos en la compra. Lo pueden modificar a su gusto, teniendo en cuenta lo que prefieren comer y les resulta más fácil de cocinar.</p>
+
+<p>Pero si pensar todas esas comidas es una tarea más para la que no tienes tiempo podemos ayudarte. En este menú saludable incluimos platos caseros y fáciles, clásicos de toda la vida para comer rico y equilibrado sin dejarte la vida en ello. </p> 
+
+      <h2>Recetas de Comidas Ricas y Saludables</h2>
+
+    <table style="width:100%" border="5">
+        <tr>
+            <th style="background-color: orange;">Categoría</th>  
+            <th style="background-color: orange;">Recetas</th>  
+        </tr>
+        <tr>
+            <td>Comidas Sanas para Desayunar</td>
+            <td>
+                <ul>
+                    <li>Bol de yogur con avena y frutos rojos.</li>
+                    <li>Tostadas de pan integral con huevo cocido y aguacate.</li>
+                    <li>Ensalada de frutas con requesón y miel en pequeñas cantidades.</li>
+                    <li>Tortitas de avena con plátano.</li>
+                    <li>Sándwich de tofu con vegetales.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Comidas Sanas para Almorzar</td>
+            <td>
+                <ul>
+                    <li>Berenjenas rellenas.</li>
+                    <li>Salteado de verduras con avena.</li>
+                    <li>Crema de garbanzos.</li>
+                    <li>Ensalada de garbanzos y frijoles negros.</li>
+                    <li>Salteado de pasta con carne y verduras.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Comidas Sanas para Cenar</td>
+            <td>
+                <ul>
+                    <li>Pollo al horno con verduras.</li>
+                    <li>Ensalada de lentejas y verduras asadas.</li>
+                    <li>Salmón crujiente con patatas y zanahorias.</li>
+                    <li>Pollo a la naranja con arroz integral.</li>
+                    <li>Ensalada de pasta con lentejas.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        Preparar comidas ricas y saludables no tiene por qué ser algo difícil.
+        Existen muchas recetas que puedes tomar como referencia para cuidar tu salud.
+    </p>
+  
+    <div class="card" onclick="toggleModal('modal1')">
+        <img src="OIP (2).jpeg" alt="Receta 1">
+        <div class="card-content">
+            <h3>Ensalada mixta</h3>
+            <p>Descripción corta de la receta...</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleModal('modal2')">
+        <img src="OIP (1).jpeg" alt="Receta 2">
+        <div class="card-content">
+            <h3>Ensalada con pepino, tomate y carne</h3>
+            <p>Descripción corta de la receta...</p>
+        </div>
+    </div>
+
+    
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="overlay" onclick="toggleModal('modal1')">
+        <div class="modal">
+            <span class="close-btn" onclick="toggleModal('modal1')">&times;</span>
+            <img src="OIP (2).jpeg" alt="Receta 1">
+            <h3>Ensalada mixta</h3>
+            <p>Lava y corta todas las verduras según tus preferencias.</p>
+<p>En un tazón grande, combina la mezcla de lechugas, tomates cherry, pepino, zanahorias, aceitunas y queso feta (si lo estás usando).</p>
+<p>En un frasco con tapa, mezcla el aceite de oliva, vinagre balsámico, mostaza Dijon, sal y pimienta. Cierra bien el frasco y agita para emulsionar la vinagreta.</p>
+<p>Vierte la vinagreta sobre la ensalada y mezcla suavemente para asegurar que todos los ingredientes estén bien cubiertos.
+Sirve la ensalada en platos individuales y disfruta.</p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="overlay" onclick="toggleModal('modal2')">
+        <div class="modal">
+            <span class="close-btn" onclick="toggleModal('modal2')">&times;</span>
+            <img src="OIP (1).jpeg" alt="Receta 2">
+            <h3>Ensalada con pepino, tomate y carne</h3>
+            <p>Corta los tomates y pepinos en rodajas o trozos.</p>
+<p>Cocina la carne y córtala en tiras o trozos pequeños.</p>
+<p>En un tazón grande, combina los tomates, pepinos y carne cocida.</p>
+<p>Agrega hojas de lechuga, cebolla, aceitunas y queso fresco o feta al tazón.</p>
+<P>Prepara un aliño mezclando aceite de oliva, vinagre balsámico, sal y pimienta al gusto.</P>
+<p>Vierte el aliño sobre la ensalada y mezcla suavemente para que todos los ingredientes se impregnen.</p>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.toggle('active');
+        }
+    </script>
+  </body>
+  </html>

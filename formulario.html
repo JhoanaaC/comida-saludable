@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #caf0f8;
+    }
+
+    .navbar {
+        background-color: #000000;
+        overflow: hidden;
+        display: flex;
+        justify-content: center; /* Centro horizontalmente */
+    }
+
+    .navbar a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .carousel {
+        width: 60%;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+</style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="jhoana.html">Inicio</a></li>
+    <li><a href="Comidas_Saludables.html">Recomendaciones</a></li>
+    <li><a href="Menu_Semanal.html">Menu Semanal</a></li>
+    <li><a href="formulario.html">Formulario</a></li>
+  </ul>
+<form action="procesar_formulario.php" method="post">
+    <fieldset>
+      <legend>Información personal:</legend>
+      <p>Nombres: <input class="info" name="nombres" required>&nbsp;&nbsp;&nbsp;</p>
+      <p>Apellidos: <input class="info" name="apellidos" required></p>
+      <p>Teléfono: <input class="info" type="tel" name="telefono" required>&nbsp;&nbsp;&nbsp;</p>
+      <p>Correo electrónico: <input class="info" type="email" name="correo" required></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>¿Cuántas veces come usted al día?</legend>
+      <p><label><input type="radio" name="frecuencia_comida" value="1"> 1 vez al día</label></p>
+      <p><label><input type="radio" name="frecuencia_comida" value="2"> 2 veces al día</label></p>
+      <p><label><input type="radio" name="frecuencia_comida" value="3"> 3 veces al día</label></p>
+      <p><label><input type="radio" name="frecuencia_comida" value="4"> 4 o más veces al día</label></p>
+    </fieldset>
+  
+
+    <fieldset>
+      <legend>¿Cuánto sabes sobre el contenido nutricional de los alimentos que consumes regularmente?</legend>
+      <p><label><input type="radio" name="conocimiento_nutricional" value="nada"> Nada en absoluto</label></p>
+     <p><label><input type="radio" name="conocimiento_nutricional" value="poco"> Poco</label></p>
+     <p><label><input type="radio" name="conocimiento_nutricional" value="bastante"> Bastante</label></p>
+     <p><label><input type="radio" name="conocimiento_nutricional" value="no_seguro"> No estoy seguro</label></p>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>¿Considera que tiene una alimentación balanceada?</legend>
+        <p><label><input type="radio" name="alimentacion_balanceada" value="si"> Sí</label></p>
+        <p><label><input type="radio" name="alimentacion_balanceada" value="no"> No</label></p>
+     
+    </fieldset>
+  
+
+            <fieldset>
+          <legend>¿Cuáles considera que son los beneficios de incluir alimentos saludables en la dieta diaria?</legend>
+          <p><textarea name="beneficios_alimentos" rows="4" cols="50" placeholder="Escriba su respuesta aquí..." required></textarea></p>
+        </fieldset>
+   
+  
+        <fieldset>
+          <legend>¿Qué alimentos considera usted que son esenciales para preparar comidas saludables en casa?</legend>
+          <p><textarea name="alimentos_esenciales" rows="4" cols="50" placeholder="Escriba su respuesta aquí..." required></textarea></p>
+        </fieldset>
+    
+    <br>
+    <div class="center"><button class="button button1" type="submit">Enviar</button></div>
+    <div class="center"><button class="button button1" type="button" onclick="alert('Gracias por realizar la encuesta')">Enviar respuesta</button></div>
+  </form>
+</body> 
